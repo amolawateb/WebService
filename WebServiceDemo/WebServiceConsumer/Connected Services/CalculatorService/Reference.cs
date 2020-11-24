@@ -9,7 +9,16 @@
 //------------------------------------------------------------------------------
 
 namespace WebServiceConsumer.CalculatorService {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ArrayOfString", Namespace="http://tempuri.org/", ItemName="string")]
+    [System.SerializableAttribute()]
+    public class ArrayOfString : System.Collections.Generic.List<string> {
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CalculatorService.CalculatorWebServiceSoap")]
@@ -20,6 +29,74 @@ namespace WebServiceConsumer.CalculatorService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Add", ReplyAction="*")]
         System.Threading.Tasks.Task<int> AddAsync(int num1, int num2);
+        
+        // CODEGEN: Generating message contract since element name GetCalcResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCalc", ReplyAction="*")]
+        WebServiceConsumer.CalculatorService.GetCalcResponse GetCalc(WebServiceConsumer.CalculatorService.GetCalcRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCalc", ReplyAction="*")]
+        System.Threading.Tasks.Task<WebServiceConsumer.CalculatorService.GetCalcResponse> GetCalcAsync(WebServiceConsumer.CalculatorService.GetCalcRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCalcRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCalc", Namespace="http://tempuri.org/", Order=0)]
+        public WebServiceConsumer.CalculatorService.GetCalcRequestBody Body;
+        
+        public GetCalcRequest() {
+        }
+        
+        public GetCalcRequest(WebServiceConsumer.CalculatorService.GetCalcRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetCalcRequestBody {
+        
+        public GetCalcRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCalcResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCalcResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WebServiceConsumer.CalculatorService.GetCalcResponseBody Body;
+        
+        public GetCalcResponse() {
+        }
+        
+        public GetCalcResponse(WebServiceConsumer.CalculatorService.GetCalcResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetCalcResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public WebServiceConsumer.CalculatorService.ArrayOfString GetCalcResult;
+        
+        public GetCalcResponseBody() {
+        }
+        
+        public GetCalcResponseBody(WebServiceConsumer.CalculatorService.ArrayOfString GetCalcResult) {
+            this.GetCalcResult = GetCalcResult;
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +132,29 @@ namespace WebServiceConsumer.CalculatorService {
         
         public System.Threading.Tasks.Task<int> AddAsync(int num1, int num2) {
             return base.Channel.AddAsync(num1, num2);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebServiceConsumer.CalculatorService.GetCalcResponse WebServiceConsumer.CalculatorService.CalculatorWebServiceSoap.GetCalc(WebServiceConsumer.CalculatorService.GetCalcRequest request) {
+            return base.Channel.GetCalc(request);
+        }
+        
+        public WebServiceConsumer.CalculatorService.ArrayOfString GetCalc() {
+            WebServiceConsumer.CalculatorService.GetCalcRequest inValue = new WebServiceConsumer.CalculatorService.GetCalcRequest();
+            inValue.Body = new WebServiceConsumer.CalculatorService.GetCalcRequestBody();
+            WebServiceConsumer.CalculatorService.GetCalcResponse retVal = ((WebServiceConsumer.CalculatorService.CalculatorWebServiceSoap)(this)).GetCalc(inValue);
+            return retVal.Body.GetCalcResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebServiceConsumer.CalculatorService.GetCalcResponse> WebServiceConsumer.CalculatorService.CalculatorWebServiceSoap.GetCalcAsync(WebServiceConsumer.CalculatorService.GetCalcRequest request) {
+            return base.Channel.GetCalcAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebServiceConsumer.CalculatorService.GetCalcResponse> GetCalcAsync() {
+            WebServiceConsumer.CalculatorService.GetCalcRequest inValue = new WebServiceConsumer.CalculatorService.GetCalcRequest();
+            inValue.Body = new WebServiceConsumer.CalculatorService.GetCalcRequestBody();
+            return ((WebServiceConsumer.CalculatorService.CalculatorWebServiceSoap)(this)).GetCalcAsync(inValue);
         }
     }
 }

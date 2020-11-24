@@ -80,6 +80,12 @@
     </None>
     <Content Include="Web.config" />
     <None Include="Connected Services\CalculatorService\CalculatorWebService.wsdl" />
+    <Content Include="Connected Services\CalculatorService\WebServiceConsumer.CalculatorService.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CalculatorService\WebServiceConsumer.CalculatorService.GetCalcResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connected Services\CalculatorService\Reference.cs">
