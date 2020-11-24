@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceConsumer", "WebSe
 		{96FAC903-FCD6-4511-A59F-03B2E78861A6} = {96FAC903-FCD6-4511-A59F-03B2E78861A6}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceByJavascript", "WebServiceByJavascript\WebServiceByJavascript.csproj", "{DFF91842-F830-4A72-89BB-3FADCC773DAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{7F43FA59-1586-417C-B09A-226CA11B16B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F43FA59-1586-417C-B09A-226CA11B16B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F43FA59-1586-417C-B09A-226CA11B16B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFF91842-F830-4A72-89BB-3FADCC773DAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFF91842-F830-4A72-89BB-3FADCC773DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFF91842-F830-4A72-89BB-3FADCC773DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFF91842-F830-4A72-89BB-3FADCC773DAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
