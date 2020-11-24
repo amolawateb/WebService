@@ -38,6 +38,11 @@
                     <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
                 </td>
             </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:GridView ID="gvRecentCalc" runat="server"></asp:GridView>
+                </td>
+            </tr>
         </table>
     </form>
 </body>

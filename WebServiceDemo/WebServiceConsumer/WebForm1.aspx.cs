@@ -19,6 +19,9 @@ namespace WebServiceConsumer
         {
             CalculatorWebServiceSoapClient cal = new CalculatorWebServiceSoapClient();
             lblResult.Text = cal.Add(Convert.ToInt32(txtNumber1.Text), Convert.ToInt32(txtNumber2.Text)).ToString();
+            gvRecentCalc.DataSource = cal.GetCalc();
+            gvRecentCalc.DataBind();
+            gvRecentCalc.HeaderRow.Cells[0].Text = "Recent Calc";
         }
     }
 }
