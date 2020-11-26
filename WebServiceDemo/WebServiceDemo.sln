@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceConsumer", "WebSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceByJavascript", "WebServiceByJavascript\WebServiceByJavascript.csproj", "{DFF91842-F830-4A72-89BB-3FADCC773DAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealTimeExample", "RealTimeExample\RealTimeExample.csproj", "{FACCEFD9-FE7F-476A-AE79-AD430B885802}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{DFF91842-F830-4A72-89BB-3FADCC773DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFF91842-F830-4A72-89BB-3FADCC773DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFF91842-F830-4A72-89BB-3FADCC773DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FACCEFD9-FE7F-476A-AE79-AD430B885802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FACCEFD9-FE7F-476A-AE79-AD430B885802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FACCEFD9-FE7F-476A-AE79-AD430B885802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FACCEFD9-FE7F-476A-AE79-AD430B885802}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
